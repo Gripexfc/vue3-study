@@ -24,8 +24,11 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "tests/**/*.tsx",
+    "**/*.ts",
+    "**/*.tsx"
   ],
+
   "references": [{ "path": "./tsconfig.node.json" }],
   "exclude": [
     "node_modules",

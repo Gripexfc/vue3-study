@@ -1,7 +1,8 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import request from '@/api/request.ts';
-import router from '@/router/index.js'
+import request from '@/api/request';
+//不能使用.ts文件结尾,打包会失效
+import router from '@/router/index'
 import { createPinia } from 'pinia';
 
 const pinia = createPinia();

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import {activtyStore} from '@/store/activty.ts';
+import {activtyStore} from '@/store/activty';
 import {ceshi} from '@/store/ceshi.js';
 import {storeToRefs} from 'pinia'
 const ccc = import.meta.env
