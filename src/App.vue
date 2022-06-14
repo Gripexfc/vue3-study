@@ -1,8 +1,8 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from '@/components/HelloWorld.vue';
-import { ref, computed, onMounted, getCurrentInstance  } from 'vue';
+import { ref, computed, onMounted } from 'vue';
+import router from '@/router/index.js'
 const b = 'a';
 let count = ref(1)
 let a = ref<number>(0);
@@ -15,10 +15,6 @@ onMounted(()=> {
   console.log('onMounted');
 })
 const plusOne = computed(() => count.value + 111)
-
-const { proxy } = getCurrentInstance()
-const ab = new proxy.$request()
-console.log(ab.request())   // 此时就能打印return 的flag的值
 
 
 </script>

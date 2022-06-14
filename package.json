@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite  --mode development",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vue-tsc --noEmit && vite build --mode production",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/node": "^17.0.42",
     "axios": "^0.27.2",
     "pinia": "^2.0.14",
     "vue": "^3.2.25",

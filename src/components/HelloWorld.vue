@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import {activtyStore} from '@/store/activty.js';
+import {activtyStore} from '@/store/activty.ts';
 import {ceshi} from '@/store/ceshi.js';
 import {storeToRefs} from 'pinia'
 const ccc = import.meta.env
@@ -10,8 +10,6 @@ const {activty} = storeToRefs(stateAc);
 const satteCe = ceshi();
 const {activt} = satteCe;
 
-
-console.log(ccc,'console.log(import.meta.env)')
 
 const Setactivty = () => {
   stateAc.$patch((state)=> {
@@ -32,7 +30,6 @@ defineProps<{ msg: string }>()
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
   <div>{{ activty }}</div>
   <div>{{ activt }}</div>
   <button @click="Setactivty">activty</button>

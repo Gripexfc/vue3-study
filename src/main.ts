@@ -1,8 +1,8 @@
 import { createApp } from 'vue';
 import App from './App.vue';
+import request from '@/api/request.ts';
 import router from '@/router/index.js'
 import { createPinia } from 'pinia';
-import request from './api/request.ts';
 
 const pinia = createPinia();
 const app = createApp(App)

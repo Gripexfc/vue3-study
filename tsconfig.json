@@ -14,9 +14,24 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/*":["src/*"]
-    }
+      "@/*": [
+        "src/*"
+      ]
+    },
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/main.ts"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.js",
+    "**/*.md",
+    "src/**/*.md",
+  ]
 }
