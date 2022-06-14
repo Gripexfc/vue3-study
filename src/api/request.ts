@@ -3,11 +3,13 @@ import axios from 'axios';
 
 export default class Request {
     constructor() {
-        const instance = axios.create({
-            baseURL: 'http://172.18.14.209:8080/',
-            timeout: 10000,
-            headers: {'X-Custom-Header': 'foobar'}
-        });
+        // const instance = axios.create({
+        //     baseURL: 'http://172.18.14.209:8080/',
+        //     timeout: 10000,
+        //     headers: {'X-Custom-Header': 'foobar'}
+        
+        // });
+        
     }
     config: object = {
         
@@ -18,10 +20,10 @@ export default class Request {
         // option.method = option.method || this.config.method;
         // axios.get('http://47.113.191.0:8031/api/categories', {
         //   })
-        axios({
-            method: 'get',
-            url: 'http://172.18.14.209:8080/api/categories',
-          });
+        // axios({
+        //     method: 'get',
+        //     url: 'http://172.18.14.209:8080/api/categories',
+        //   });
         
           
         // Add a request interceptor

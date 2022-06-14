@@ -24,11 +24,8 @@ console.log(ab.request())   // 此时就能打印return 的flag的值
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <div>{{ plusOne }}</div>
-  <div>{{ a }}</div>
-  <button @click="add">点击</button>
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <router-link to="/activty">Go to Home</router-link>
+  <router-view></router-view>
 </template>
 
 <style>

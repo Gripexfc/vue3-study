@@ -1,5 +1,30 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import {activtyStore} from '@/store/activty.js';
+import {ceshi} from '@/store/ceshi.js';
+import {storeToRefs} from 'pinia'
+const ccc = import.meta.env
+ 
+const stateAc = activtyStore();
+const {activty} = storeToRefs(stateAc);
+const satteCe = ceshi();
+const {activt} = satteCe;
+
+
+console.log(ccc,'console.log(import.meta.env)')
+
+const Setactivty = () => {
+  stateAc.$patch((state)=> {
+    state.activty = state.activty + 3;
+  })
+  // stateAc.$patch({
+  //   activty: stateAc.activty+2
+  // });
+  // stateAc.$patch((state) => {
+  //   state.activt = state.activt+3
+  // })
+}
+
 const count = ref(0)
 defineProps<{ msg: string }>()
 
@@ -8,29 +33,9 @@ defineProps<{ msg: string }>()
 
 <template>
   <h1>{{ msg }}</h1>
-
-  <p>
-    Recommended IDE setup:
-    <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>
-    +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-  </p>
-
-  <p>See <code>README.md</code> for more information.</p>
-
-  <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">
-      Vite Docs
-    </a>
-    |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
-  </p>
-
-  <button type="button" @click="count++">count is: {{ count }}</button>
-  <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
-  </p>
+  <div>{{ activty }}</div>
+  <div>{{ activt }}</div>
+  <button @click="Setactivty">activty</button>
 </template>
 
 <style scoped>
